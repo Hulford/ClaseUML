@@ -6,11 +6,6 @@ import lombok.*;
 
 @Entity @Getter @Setter
 public class Pais extends Identificable{
-
-
-@Column(length = 34)
-String pais;
-
-
-
+	@Column(length=50)
+	String descripcion;
 }
