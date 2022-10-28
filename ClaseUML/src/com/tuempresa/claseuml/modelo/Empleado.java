@@ -31,4 +31,6 @@ public class Empleado extends Identificable{
 				optional=true) // La referencia puede estar sin valor
 				@DescriptionsList // Así la referencia se visualiza usando un combo
 				Tripulacion tripulacion; // Una referencia Java convencional
+		
+		 
 }

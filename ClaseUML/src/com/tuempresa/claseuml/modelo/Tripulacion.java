@@ -22,6 +22,6 @@ public class Tripulacion extends Identificable{
 			@DescriptionsList // Así la referencia se visualiza usando un combo
 			Aerolinea aerolinea; // Una referencia Java convencional
  
-	 
+ 
 	
 }

@@ -19,4 +19,5 @@ public class Aerolinea extends Identificable{
 			@DescriptionsList // Así la referencia se visualiza usando un combo
 			Pais pais; // Una referencia Java convencional
  
+	
 }
