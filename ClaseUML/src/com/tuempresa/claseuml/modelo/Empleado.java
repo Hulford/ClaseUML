@@ -26,11 +26,11 @@ public class Empleado extends Identificable{
 	 @Embedded @NoFrame
 		Direccion direccion;
 	 
-		@ManyToOne( // La referencia se almacena como una relación en la base de datos
-				fetch=FetchType.LAZY, // La referencia se carga bajo demanda
-				optional=true) // La referencia puede estar sin valor
-				@DescriptionsList // Así la referencia se visualiza usando un combo
-				Tripulacion tripulacion; // Una referencia Java convencional
+		@ManyToOne(  
+				fetch=FetchType.LAZY,  
+				optional=true)  
+				@DescriptionsList  
+				Tripulacion tripulacion;  
 		
 		 
 }

@@ -1,5 +1,7 @@
 package com.tuempresa.claseuml.modelo;
 
+import java.util.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -14,14 +16,17 @@ public class Tripulacion extends Identificable{
 	
 	@Column
 	int numElementos;
- 
+  
 	
-	@ManyToOne( // La referencia se almacena como una relación en la base de datos
-			fetch=FetchType.LAZY, // La referencia se carga bajo demanda
-			optional=true) // La referencia puede estar sin valor
-			@DescriptionsList // Así la referencia se visualiza usando un combo
-			Aerolinea aerolinea; // Una referencia Java convencional
+	@ManyToOne(  
+			fetch=FetchType.LAZY,  
+			optional=true)  
+			@DescriptionsList  
+			Aerolinea aerolinea; 
  
- 
+	@OneToMany 
+	 
+	Collection<Empleado>empleados;
+		 
 	
 }

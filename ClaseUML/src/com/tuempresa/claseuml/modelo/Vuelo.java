@@ -19,4 +19,10 @@ public class Vuelo extends Identificable{
 	@Required
 	@DefaultValueCalculator(CurrentLocalDateCalculator.class) 
 	LocalDate fecha;
+	
+ 
+	@StringTime
+    @Column(length=33)
+	@DefaultValueCalculator(CurrentDateCalculator.class) 
+    private String startTime; 
 }
