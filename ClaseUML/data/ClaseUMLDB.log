@@ -1,4 +1,5 @@
 /*C3*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C4*/SET SCHEMA PUBLIC
-create table ClaseUML.Pasajero (oid varchar(32) not null, nombre varchar(32), numElementos integer, primary key (oid))
+/*C4*/SET SCHEMA CLASEUML
+DELETE FROM PAIS WHERE OID='ff808081841ec3e701841ecebebb0000'
+COMMIT

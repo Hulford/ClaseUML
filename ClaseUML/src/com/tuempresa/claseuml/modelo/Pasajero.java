@@ -2,15 +2,20 @@ package com.tuempresa.claseuml.modelo;
 
 import javax.persistence.*;
 
+import org.openxava.annotations.*;
+
 import lombok.*;
 
 @Entity @Getter @Setter
 public class Pasajero extends Identificable{
-
-	@Column(length = 32)
-	String nombre;
-	
+ 
 	@Column
-	int numElementos;
+	int numeroAsiento;
+ 
+	@Money  
+	float CostoBoleto;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = true)
+	Persona persona;
  
 }
