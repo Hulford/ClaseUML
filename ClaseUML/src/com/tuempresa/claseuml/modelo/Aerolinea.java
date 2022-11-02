@@ -13,11 +13,11 @@ public class Aerolinea extends Identificable{
 	@Column ( length  =32)
 	String nombre;
 	
-	@ManyToOne( // La referencia se almacena como una relación en la base de datos
-			fetch=FetchType.LAZY, // La referencia se carga bajo demanda
-			optional=true) // La referencia puede estar sin valor
-			@DescriptionsList // Así la referencia se visualiza usando un combo
-			Pais pais; // Una referencia Java convencional
+	@ManyToOne(  
+			fetch=FetchType.LAZY, 
+			optional=true)  
+			@DescriptionsList  
+			Pais pais;  
  
 	
 }

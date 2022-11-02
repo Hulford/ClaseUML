@@ -15,16 +15,19 @@ public class Direccion {
 	@Column (length = 5)
 	int CodigoPostal;
 	
-	@Column(length = 20)
-	String municipio;
+	@ManyToOne(  
+			fetch=FetchType.LAZY, 
+			optional=true)  
+			@DescriptionsList  
+			Municipio municipio;  
 	
 	@Column(length = 30)
 	String provincia;
 	
-	@ManyToOne( // La referencia se almacena como una relación en la base de datos
-			fetch=FetchType.LAZY, // La referencia se carga bajo demanda
-			optional=true) // La referencia puede estar sin valor
-			@DescriptionsList // Así la referencia se visualiza usando un combo
-			Pais pais; // Una referencia Java convencional
+	@ManyToOne(  
+			fetch=FetchType.LAZY, 
+			optional=true) 
+			@DescriptionsList  
+			Pais pais;  
 	
 }

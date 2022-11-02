@@ -1,25 +1,11 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C5*/SET SCHEMA PUBLIC
-create table ClaseUML.Tripulacion_Empleado (Tripulacion_oid varchar(32) not null, empleados_oid varchar(32) not null)
-alter table ClaseUML.Tripulacion_Empleado add constraint UK_6k0fvn95fn1ybldcof1dhx9k7 unique (empleados_oid)
-alter table ClaseUML.Tripulacion_Empleado add constraint FKgeqdxbftinghm4ltf2gxen95e foreign key (empleados_oid) references ClaseUML.Empleado
-alter table ClaseUML.Tripulacion_Empleado add constraint FK2yh8fj51jfrmgmbtlq4ylmj22 foreign key (Tripulacion_oid) references ClaseUML.Tripulacion
 alter table ClaseUML.Tripulacion_Empleado drop constraint UK_6k0fvn95fn1ybldcof1dhx9k7
 alter table ClaseUML.Tripulacion_Empleado add constraint UK_6k0fvn95fn1ybldcof1dhx9k7 unique (empleados_oid)
-/*C6*/SET SCHEMA PUBLIC
 alter table ClaseUML.Tripulacion_Empleado drop constraint UK_6k0fvn95fn1ybldcof1dhx9k7
 alter table ClaseUML.Tripulacion_Empleado add constraint UK_6k0fvn95fn1ybldcof1dhx9k7 unique (empleados_oid)
 SET SCHEMA CLASEUML
-DELETE FROM EMPLEADO WHERE OID='402881d4841c713201841c72e8830000'
-INSERT INTO EMPLEADO VALUES('402881d4841c713201841c72e8830000','Cante',2200,'FCP','FCP','Centro','1C720378C0A80154000000005A737A05','Santi','402881928416b1fe018416b22ce90000',NULL,NULL)
-COMMIT
-DELETE FROM EMPLEADO WHERE OID='402881d4841c713201841c72e8830000'
-INSERT INTO EMPLEADO VALUES('402881d4841c713201841c72e8830000','Cante',2200,'FCP','FCP','Centro','1C720378C0A80154000000005A737A05','Santi','402881928416b1fe018416b22ce90000','402881d4841c6c6e01841c6e7f580000',NULL)
-COMMIT
-INSERT INTO EMPLEADO VALUES('402881c68431b63c018431bcec0e0000','fuentes',4567,'FCP','Polyuc','Centro','31BB1F64C0A801460000000066489603','maria','402881928416b1fe018416b22ce90000','402881d4841c6c6e01841c6e7f580000',NULL)
-COMMIT
-INSERT INTO TRIPULACION VALUES('402881c68431b63c018431bded090001','barbaroja',NULL,2,'402881928416b4df018416b5acf30001')
-DELETE FROM EMPLEADO WHERE OID='402881c68431b63c018431bcec0e0000'
-INSERT INTO EMPLEADO VALUES('402881c68431b63c018431bcec0e0000','fuentes',4567,'FCP','Polyuc','Centro','31BB1F64C0A801460000000066489603','maria','402881928416b1fe018416b22ce90000','402881c68431b63c018431bded090001',NULL)
+DELETE FROM VUELO WHERE OID='402881c684327c3d0184327c8f3f0000'
+INSERT INTO VUELO VALUES('402881c684327c3d0184327c8f3f0000',NULL,NULL,2022,'2022-11-01','04:15',NULL,NULL,'402881c6843270a301843273722f0004','402881c6843270a3018432718a3c0002',NULL,'04:00')
 COMMIT

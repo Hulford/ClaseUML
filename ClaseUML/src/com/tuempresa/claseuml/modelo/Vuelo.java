@@ -16,6 +16,20 @@ public class Vuelo extends Identificable{
 	 @DefaultValueCalculator(CurrentYearCalculator.class) 
 	 int anyo;
 	
+	@ManyToOne(  
+			fetch=FetchType.LAZY,  
+			optional=true)  
+			@DescriptionsList  
+			CiudadOrigen ciudadOrigen; 
+	
+	
+	@ManyToOne(  
+			fetch=FetchType.LAZY,  
+			optional=true)  
+			@DescriptionsList  
+			CiudadDestino ciudadDestino; 
+	
+	
 	@Required
 	@DefaultValueCalculator(CurrentLocalDateCalculator.class) 
 	LocalDate fecha;
@@ -23,6 +37,6 @@ public class Vuelo extends Identificable{
  
 	@StringTime
     @Column(length=33)
-	@DefaultValueCalculator(CurrentDateCalculator.class) 
+	@DefaultValueCalculator(CurrentTimestampCalculator.class) 
     private String startTime; 
 }

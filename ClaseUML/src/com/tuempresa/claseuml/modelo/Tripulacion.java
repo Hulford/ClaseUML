@@ -29,4 +29,5 @@ public class Tripulacion extends Identificable{
 	Collection<Empleado>empleados;
 		 
 	
+	
 }
