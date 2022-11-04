@@ -9,9 +9,12 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity @Getter @Setter
+@View(members = "nombre, numElementos;"+
+"aerolinea;"
+		+"empleados")
 public class Tripulacion extends Identificable{
 	@Required
-	@Column(length = 32)
+	@Column
 	String nombre;
 	@Required
 	@Column

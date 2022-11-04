@@ -14,6 +14,10 @@ import lombok.*;
 
 @Entity @Getter @Setter
 @View(name = "Vuelos", members = "numero, ciudadOrigen, ciudadDestino")
+@View(members = "anyo,numero,fecha;"+
+"ciudadOrigen, ciudadDestino;"+
+		"tripulación;"+
+"pasajeros")
 public class Vuelo extends Identificable{
 	
 	@Column(length=4)
@@ -44,10 +48,10 @@ public class Vuelo extends Identificable{
 	LocalDate fecha;
 	
  
-	//@StringTime
-    //@Column(length=33)
-	//@DefaultValueCalculator(CurrentTimestampCalculator.class) 
-   // private String startTime; 
+	@StringTime
+    @Column(length=33)
+	
+    private String startTime; 
 	
 	//@Required
 	@ManyToOne(  

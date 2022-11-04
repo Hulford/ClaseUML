@@ -10,7 +10,7 @@ import lombok.*;
 
 public class Aerolinea extends Identificable{
 	@Required
-	@Column ( length  =32)
+	@Column 
 	String nombre;
 	
 @Required

@@ -12,7 +12,7 @@ import lombok.*;
 
 public class Pasajero extends Identificable{
 	@Required
-	@Column(length = 32)
+	@Column
 	int numeroAsiento;
 	@Required
 	@Money
@@ -20,7 +20,7 @@ public class Pasajero extends Identificable{
 	float precio;
 	 
 	@Required
-	@OneToOne
+	@OneToOne 
 	@ReferenceView("simple")//*************
 	Persona persona;
 	
