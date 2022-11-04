@@ -9,15 +9,16 @@ import lombok.*;
 @Entity @Getter @Setter
 
 public class Aerolinea extends Identificable{
-
+	@Required
 	@Column ( length  =32)
 	String nombre;
 	
+@Required
 	@ManyToOne(  
 			fetch=FetchType.LAZY, 
 			optional=true)  
 			@DescriptionsList  
-			Pais pais;  
+			Pais país;  
  
 	
 }

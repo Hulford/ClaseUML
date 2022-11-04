@@ -9,16 +9,27 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity @Getter @Setter
+
 public class Pasajero extends Identificable{
- 
+	@Required
 	@Column(length = 32)
 	int numeroAsiento;
- 
+	@Required
 	@Money
 	@Column(length = 32)
 	float precio;
-	
-	@OneToOne(fetch = FetchType.LAZY, optional = true)
+	 
+	@Required
+	@OneToOne
+	@ReferenceView("simple")//*************
 	Persona persona;
- 
+	
+	 //@Required
+	@ManyToOne(  
+			fetch=FetchType.LAZY,  
+			optional=true)  
+ @ReferenceView("Vuelos") 
+			Vuelo vuelo;  
+	
+	
 }

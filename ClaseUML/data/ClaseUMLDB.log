@@ -3,9 +3,9 @@ DISCONNECT
 /*C5*/SET SCHEMA PUBLIC
 alter table ClaseUML.Tripulacion_Empleado drop constraint UK_6k0fvn95fn1ybldcof1dhx9k7
 alter table ClaseUML.Tripulacion_Empleado add constraint UK_6k0fvn95fn1ybldcof1dhx9k7 unique (empleados_oid)
+alter table ClaseUML.Vuelo_Pasajero drop constraint UK_1a846jdjpw0e6xjvjvoack64v
+alter table ClaseUML.Vuelo_Pasajero add constraint UK_1a846jdjpw0e6xjvjvoack64v unique (pasajeros_oid)
 alter table ClaseUML.Tripulacion_Empleado drop constraint UK_6k0fvn95fn1ybldcof1dhx9k7
 alter table ClaseUML.Tripulacion_Empleado add constraint UK_6k0fvn95fn1ybldcof1dhx9k7 unique (empleados_oid)
-SET SCHEMA CLASEUML
-DELETE FROM VUELO WHERE OID='402881c684327c3d0184327c8f3f0000'
-INSERT INTO VUELO VALUES('402881c684327c3d0184327c8f3f0000',NULL,NULL,2022,'2022-11-01','04:15',NULL,NULL,'402881c6843270a301843273722f0004','402881c6843270a3018432718a3c0002',NULL,'04:00')
-COMMIT
+alter table ClaseUML.Vuelo_Pasajero drop constraint UK_1a846jdjpw0e6xjvjvoack64v
+alter table ClaseUML.Vuelo_Pasajero add constraint UK_1a846jdjpw0e6xjvjvoack64v unique (pasajeros_oid)

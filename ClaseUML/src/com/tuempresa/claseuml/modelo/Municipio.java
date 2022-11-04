@@ -6,6 +6,6 @@ import lombok.*;
 
 @Entity @Getter @Setter
 public class Municipio extends Identificable {
-
+	
 	String descripcion;
 }

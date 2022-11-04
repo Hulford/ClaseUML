@@ -22,10 +22,10 @@ public class Empleado extends Identificable{
 	    @Column (length = 32)
 	    String fotos; 
 
-	 
+	@Required
 	 @Embedded @NoFrame
 		Direccion direccion;
-	 
+	 //@Required
 		@ManyToOne(  
 				fetch=FetchType.LAZY,  
 				optional=true)  

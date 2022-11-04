@@ -7,5 +7,6 @@ import lombok.*;
 @Entity @Getter @Setter
 
 public class CiudadOrigen extends Identificable{
+	
 String descripcion;
 }
